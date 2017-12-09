@@ -7,8 +7,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  counter: number = 0;
 
+  constructor(public navCtrl: NavController) { }
+
+  nextQuestion(){
+    this.counter++;
+    console.log(this.counter);
+  }
+
+  resetCounter(){
+    this.counter = 0;
+    console.log('counter is reset!');
   }
 
 }

@@ -6,9 +6,30 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding text-center>
+  <br><br><br><br>
+  <h1 *ngIf="counter==0">{{ 'question1' | translate }}</h1>
+  <h1 *ngIf="counter==1">{{ 'question2' | translate }}</h1>
+  <h1 *ngIf="counter==2">{{ 'question3' | translate }}</h1>
+  <h1 *ngIf="counter==3">{{ 'question4' | translate }}</h1>
+  <h1 *ngIf="counter==4">{{ 'question5' | translate }}</h1>
+  <h1 *ngIf="counter==5">{{ 'question6' | translate }}</h1>
+  <h1 *ngIf="counter==6">{{ 'question7' | translate }}</h1>
+  <h1 *ngIf="counter==7">{{ 'question8' | translate }}</h1>
+  <h1 *ngIf="counter==8">{{ 'question9' | translate }}</h1>
+  <h1 *ngIf="counter==9">{{ 'question10' | translate }}</h1>
+  <h1 *ngIf="counter==10">{{ 'question11' | translate }}</h1>
+  <h1 *ngIf="counter==11">{{ 'question12' | translate }}</h1>
+  <h1 *ngIf="counter==12">{{ 'question13' | translate }}</h1>
+  <h1 *ngIf="counter==13">{{ 'question14' | translate }}</h1>
+  <h1 *ngIf="counter==14">{{ 'question15' | translate }}</h1>
+  <h1 *ngIf="counter==15">{{ 'question16' | translate }}</h1>
+  <h1 *ngIf="counter==16">{{ 'question17' | translate }}</h1>
+  <h1 *ngIf="counter==17">{{ 'question18' | translate }}</h1>
+  <h1 *ngIf="counter==18">{{ 'question19' | translate }}</h1>
+  <h1 *ngIf="counter==19">{{ 'question20' | translate }}</h1>
+  <h1 *ngIf="counter==20">{{ 'done' | translate }}</h1>
+  <br>
+  <button *ngIf="counter!=20" ion-button (click)="nextQuestion()" large>next</button>
+  <button *ngIf="counter!=20" ion-button (click)="resetCounter()" large>reset</button>
 </ion-content>
