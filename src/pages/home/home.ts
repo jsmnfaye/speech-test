@@ -8,12 +8,14 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   counter: number = 0;
+  answers: Array<number> = [];
 
   constructor(public navCtrl: NavController) { }
 
   nextQuestion(){
     this.counter++;
-    console.log(this.counter);
+    this.answers.push(this.counter);
+    console.log(this.answers);
   }
 
   resetCounter(){
