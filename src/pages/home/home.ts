@@ -30,14 +30,12 @@ export class HomePage {
       (matches: Array<string>) => {
         this.answer = matches[0];
         console.log("your answer is "+this.answer);
-        // console.log(this.answers);
+        this.counter++;
+        this.answers.push(this.answer);
+        console.log(this.answers);
+        console.log("answer #"+this.counter);
       }
     )
-    this.counter++;
-    this.answers.push(this.answer);
-    console.log(this.answers);
-    console.log("answer #"+this.counter);
-    // console.log(this.answer);
   }
 
   resetCounter(){
