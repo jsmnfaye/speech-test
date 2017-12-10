@@ -28,7 +28,8 @@ export class HomePage {
   nextQuestion(){
     this.speechRecog.startListening().subscribe(
       (matches: Array<string>) => {
-        this.answer = matches[0];
+        // this.answer = matches[0];
+        this.lookForNumber(matches);
         console.log("your answer is "+this.answer);
         this.counter++;
         this.answers.push(this.answer);
@@ -41,6 +42,16 @@ export class HomePage {
   resetCounter(){
     this.counter = 0;
     console.log('counter is reset!');
+  }
+
+  lookForNumber(matches: Array<string>){
+    for(let i = 0; i<matches.length; i++){
+      if(matches[i] == '1' || matches[i] == '2' || matches[i] == '3' || matches[i] == '4' || matches[i] == '5'){
+        this.answer = parseInt(matches[i]);
+        break;
+      }
+    }
+    // console.log(this.answer);
   }
 
 }
